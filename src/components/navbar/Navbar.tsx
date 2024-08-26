@@ -1,45 +1,59 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="
+    <div
+      className="
+      w-full
+      justify-center
+      py-4
     bg-indigo-900
     text-white
-    ">
-      <div className="
-    container
+    "
+    >
+      <div
+        className="
     flex
     justify-between
-    ">
-
-        <h2 className="
+    "
+      >
+        <h2
+          className="
         text-3xl
         font-bold
         pl-16
-        ">
-          <Link to='/home'>BLOG PESSOAL</Link>
+        uppercase
+        "
+        >
+          <Link to="/home">Blog Pessoal</Link>
         </h2>
-        
-          <ul className="flex flex-row">
-            <li>
-              <a href="">Postagens</a>
-            </li>
-            <li className="pl-5">
-              <a href="">Temas</a>
-            </li>
-            <li className="pl-5">
-              <a href="">Cadastrar Tema</a>
-            </li>
-            <li className="pl-5">
-              <a href="">Perfil</a>
-            </li>
-            <li className="pl-5">
-              <a href="">Sair</a>
-            </li>
-          </ul>
+
+        <ul className="flex flex-row items-center">
+          <li>
+            <Link to='/login' className="hover:underline">Login</Link>
+          </li>
+          <li className="pl-5">
+            <Link to='/home' className="hover:underline">Home</Link>
+          </li>
+          <li className="pl-5">
+            <a href="" className="hover:underline">Postagens</a>
+          </li>
+          <li className="pl-5">
+            <a href="" className="hover:underline">Temas</a>
+          </li>
+          <li className="pl-5">
+            <a href="" className="hover:underline">Cadastrar Tema</a>
+          </li>
+          <li className="pl-5">
+            <a href="" className="hover:underline">Perfil</a>
+          </li>
+          <li className="pl-5 mr-10">
+            <a href="" className="hover:underline">Sair</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  )
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;
