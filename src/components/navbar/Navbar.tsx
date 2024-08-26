@@ -1,6 +1,17 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import AuthContext from "../../contexts/AuthContext";
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  const { handleLogout } = useContext(AuthContext);
+
+  function logout() {
+    handleLogout();
+    alert("O usuário foi desconectado com sucesso!");
+    navigate("/");
+  }
   return (
     <div
       className="
@@ -30,25 +41,41 @@ function Navbar() {
 
         <ul className="flex flex-row items-center">
           <li>
-            <Link to='/login' className="hover:underline">Login</Link>
+            <Link to="/login" className="hover:underline">
+              Login
+            </Link>
           </li>
           <li className="pl-5">
-            <Link to='/home' className="hover:underline">Home</Link>
+            <Link to="/home" className="hover:underline">
+              Home
+            </Link>
           </li>
           <li className="pl-5">
-            <a href="" className="hover:underline">Postagens</a>
+            <a href="" className="hover:underline">
+              Postagens
+            </a>
           </li>
           <li className="pl-5">
-            <a href="" className="hover:underline">Temas</a>
+            <a href="" className="hover:underline">
+              Temas
+            </a>
           </li>
           <li className="pl-5">
-            <a href="" className="hover:underline">Cadastrar Tema</a>
+            <a href="" className="hover:underline">
+              Cadastrar Tema
+            </a>
           </li>
           <li className="pl-5">
-            <a href="" className="hover:underline">Perfil</a>
+            <a href="" className="hover:underline">
+              Perfil
+            </a>
           </li>
           <li className="pl-5 mr-10">
-            <a href="" className="hover:underline">Sair</a>
+            <a href="" className="hover:underline">
+              <Link to="" onClick={logout} className="hover:underline">
+                Sair
+              </Link>
+            </a>
           </li>
         </ul>
       </div>
