@@ -10,7 +10,7 @@ function Navbar() {
   function logout() {
     handleLogout();
     alert("O usuário foi desconectado com sucesso!");
-    navigate("/");
+    navigate("/login");
   }
   return (
     <div
@@ -57,7 +57,7 @@ function Navbar() {
           </li>
           <li className="pl-5">
             <a href="" className="hover:underline">
-              Temas
+              <Link to="/temas">Temas</Link>
             </a>
           </li>
           <li className="pl-5">
