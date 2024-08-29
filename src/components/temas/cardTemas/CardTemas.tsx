@@ -17,7 +17,7 @@ function CardTemas({ tema }: CardTemasProps) {
       <p className="p-8 text-3xl bg-slate-200 h-full">{tema.descricao}</p>
       <div className="flex">
         <Link
-          to=""
+          to={`/editartema/${tema.id}`}
           className="w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center h-10"
         >
           <button>Editar</button>

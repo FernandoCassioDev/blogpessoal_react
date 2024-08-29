@@ -62,7 +62,7 @@ function Navbar() {
           </li>
           <li className="pl-5">
             <a href="" className="hover:underline">
-              Cadastrar Tema
+              <Link to="/cadastroTema">Cadastrar Tema</Link>
             </a>
           </li>
           <li className="pl-5">
