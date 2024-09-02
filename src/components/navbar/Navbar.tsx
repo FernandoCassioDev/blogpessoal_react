@@ -51,9 +51,9 @@ function Navbar() {
             </Link>
           </li>
           <li className="pl-5">
-            <a href="" className="hover:underline">
+            <Link to="/postagens" className="hover:underline">
               Postagens
-            </a>
+            </Link>
           </li>
           <li className="pl-5">
             <a href="" className="hover:underline">
