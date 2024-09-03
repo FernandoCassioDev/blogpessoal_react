@@ -5,6 +5,7 @@ import AuthContext from "../../../contexts/AuthContext";
 import Postagem from "../../../models/Postagem";
 import { buscar } from "../../../service/Service";
 import CardPostagem from "../cardpostagem/CardPostagem";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function ListaPostagens() {
   const [postagens, setPostagens] = useState<Postagem[]>([]);
@@ -16,7 +17,7 @@ function ListaPostagens() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado");
+      ToastAlerta("Você precisa estar logado", "info");
       navigate("/");
     }
   }, [token]);
@@ -30,7 +31,7 @@ function ListaPostagens() {
       });
     } catch (error: any) {
       if (error.toString().includes("401")) {
-        alert("O token expirou, por favor logar novamente");
+        ToastAlerta("O token expirou, por favor logar novamente", "info");
         handleLogout();
       }
     }
