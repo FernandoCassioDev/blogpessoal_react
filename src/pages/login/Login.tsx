@@ -94,7 +94,9 @@ function Login() {
             </Link>
           </p>
         </form>
-        <div className="fundoLogin hidden lg:block"></div>
+        <div className="fundoLogin hidden lg:block">
+        <img src="https://raw.githubusercontent.com/LucasCapSilva/blog-pessoal-react-2023/cadastrar-postagem-logica/src/assets/login.jpg" className="max-h-screen w-[50vw]" alt="foto de agenda" />
+        </div>
       </div>
     </>
   );
