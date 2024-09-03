@@ -52,16 +52,7 @@ function Home() {
             gap-4
             "
             >
-              <div
-                className="
-              rounded
-              border-white
-              border-solid
-              border-2
-              py-2
-              px-4
-              "
-              >
+              <div>
                 <ModalPostagem />
               </div>
             </div>
