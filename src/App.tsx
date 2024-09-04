@@ -1,20 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
-import Home from "./pages/home/Home";
-import Cadastro from "./pages/cadastro/Cadastro";
-import Login from "./pages/login/Login";
-import { AuthProvider } from "./contexts/AuthContext";
-import ListaTemas from "./components/temas/listatemas/ListaTemas";
-import FormTema from "./components/temas/formulariotema/FormTema";
-import DeletarTema from "./components/temas/deletartema/Deletar";
-import ListaPostagens from "./components/postagem/listapostagens/ListaPostagens";
-import FormularioPostagem from "./components/postagem/formulariopostagem/FormularioPostagem";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from "react-toastify";
-import Perfil from "./pages/perfil/Perfil";
 import DeletarPostagem from "./components/postagem/deletarpostagem/DeletarPostagem";
+import FormularioPostagem from "./components/postagem/formulariopostagem/FormularioPostagem";
+import ListaPostagens from "./components/postagem/listapostagens/ListaPostagens";
+import DeletarTema from "./components/temas/deletartema/Deletar";
+import FormTema from "./components/temas/formulariotema/FormTema";
+import ListaTemas from "./components/temas/listatemas/ListaTemas";
+import { AuthProvider } from "./contexts/AuthContext";
+import Cadastro from "./pages/cadastro/Cadastro";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Perfil from "./pages/perfil/Perfil";
 
 function App() {
   return (

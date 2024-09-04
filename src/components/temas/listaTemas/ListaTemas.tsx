@@ -1,13 +1,13 @@
 //import React from 'react'
 
-import { useNavigate } from "react-router-dom";
-import CardTemas from "../cardtemas/CardTemas";
 import { useContext, useEffect, useState } from "react";
-import Tema from "../../../models/Tema";
-import AuthContext from "../../../contexts/AuthContext";
-import { buscar } from "../../../service/Service";
 import { DNA } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
+import AuthContext from "../../../contexts/AuthContext";
+import Tema from "../../../models/Tema";
+import { buscar } from "../../../service/Service";
 import { ToastAlerta } from "../../../utils/ToastAlerta";
+import CardTemas from "../cardtemas/CardTemas";
 
 function ListaTemas() {
   const navigate = useNavigate();
