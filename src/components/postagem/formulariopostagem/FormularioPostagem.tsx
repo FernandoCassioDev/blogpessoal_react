@@ -180,11 +180,10 @@ function FormularioPostagem() {
           <select
             name="tema"
             id="tema"
-            value={tema.id}
             className="border p-2 border-slate-800 rounded"
             onChange={(e) => buscarTemaPorId(e.currentTarget.value)}
           >
-            <option value="" disabled>
+            <option value="" selected disabled>
               Selecione um tema
             </option>
             {temas.map((tema) => (
