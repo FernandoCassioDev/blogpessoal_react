@@ -196,7 +196,8 @@ function FormularioPostagem() {
         <button
           disabled={carregandoTema}
           type="submit"
-          className="rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2"
+          className="rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto flex py-2
+           justify-center"
         >
           {isLoading ? (
             <RotatingLines

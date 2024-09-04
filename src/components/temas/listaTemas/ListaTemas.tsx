@@ -50,12 +50,10 @@ function ListaTemas() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      <div className="container flex flex-col">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {temas.map((tema) => (
-            <CardTemas key={tema.id} tema={tema} />
-          ))}
-        </div>
+      <div className="container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {temas.map((tema) => (
+          <CardTemas key={tema.id} tema={tema} />
+        ))}
       </div>
     </>
   );
